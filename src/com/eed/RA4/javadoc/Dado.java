@@ -29,7 +29,7 @@ public class Dado {
   static char[] caras8 = new char[] {'C','A','R','E','M','E'};
   static char[] caras9 = new char[] {'R','S','J','E','F','I'};
   static char[] caras10 = new char[] {'N','S','X','J','A','H'};
-  static char[] caras11 = new char[] {'U','V','D','Q','B','Ñ'};
+  static char[] caras11 = new char[] {'U','V','D','Q','B','J'};
   static char[] caras12 = new char[] {'N','B','I','M','E','E'};
   static char[] caras13 = new char[] {'B','A','A','N','I','T'};
   static char[] caras14 = new char[] {'I','O','T','A','L','G'};

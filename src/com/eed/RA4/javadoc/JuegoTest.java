@@ -38,7 +38,7 @@ public class JuegoTest {
 
   /**
    * Muestra los puntos de todos los jugadores
-   * @param jugadores que van a jugar
+   * @param jugadores
    */
   static void mostrarPuntos(ArrayList<Jugador> jugadores) {
 
@@ -50,7 +50,7 @@ public class JuegoTest {
 
   /**
    * Muestra al jugador ganador
-   * @param jugadores que han jugado
+   * @param jugadores
    */
   static void mostrarGanador(ArrayList<Jugador> jugadores) {
 
@@ -88,50 +88,19 @@ public class JuegoTest {
     //Añado las palabras de la rae sin tildes a una colección
     HashSet<String> palabrasRAE = new HashSet<String>();
     while((linea=ficheroRAE.readLine()) != null) {
-      palabrasRAE.add(devuelveSinTildes(linea));
+      palabrasRAE.add(linea);
     }
 
     ficheroRAE.close();
     return palabrasRAE;
   }
   
-  /**
-   * Devuelve la palabra sin tildes
-   * @param palabra
-   * @return palabra sin tildes
-   */
-  static String devuelveSinTildes(String palabra) {
     
-    String nuevaPalabra = "";
-    
-    for(int i = 0; i < palabra.length(); i++) {
-      
-      if (palabra.charAt(i) == 'á') {
-        nuevaPalabra = nuevaPalabra + 'a';
-      }
-      else if (palabra.charAt(i) == 'é') {
-        nuevaPalabra = nuevaPalabra + 'e';
-      }
-      else if (palabra.charAt(i) == 'í') {
-        nuevaPalabra = nuevaPalabra + 'i';
-      }
-      else if (palabra.charAt(i) == 'ó') {
-        nuevaPalabra = nuevaPalabra + 'o';
-      }
-      else if (palabra.charAt(i) == 'ú') {
-        nuevaPalabra = nuevaPalabra + 'u';
-      }
-      else {
-        nuevaPalabra = nuevaPalabra + palabra.charAt(i);
-      }  
-    }
-    return nuevaPalabra;
-    
-  }
+ 
 
   /**
    * Crea jugadores 
-   * @param número de jugadores
+   * @param númeroDeJugadores
    * @return jugadores
    */
   static ArrayList<Jugador> crearJugadores(int numeroDeJugadores) {
@@ -218,8 +187,8 @@ public class JuegoTest {
             System.out.print("Palabra: ");
             palabra = s.nextLine();
 
-            if (tablero.esPalabraCorrecta(devuelveSinTildes(palabra), palabrasRAE) && contador.intervalo > 0) {
-              jugadores.get(i).addPalabra(devuelveSinTildes(palabra));
+            if (tablero.esPalabraCorrecta(palabra, palabrasRAE) && contador.intervalo > 0) {
+              jugadores.get(i).addPalabra(palabra);
             }
 
           }

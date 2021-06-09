@@ -20,7 +20,7 @@ public class Contador {
     */
    Timer timer;
    /**
-    * Hace la cuenta atrás
+    * Hace la cuenta atras
     * @param segundos
     */
   public void cuentaAtras(int segundos) {

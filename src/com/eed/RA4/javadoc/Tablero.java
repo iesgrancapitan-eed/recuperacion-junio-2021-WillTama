@@ -73,7 +73,7 @@ public class Tablero {
   /**
    * Comprueba si la palabra está en la RAE
    * @param palabra
-   * @param colección de palabras de la RAE
+   * @param palabrasRAE
    * @return true si la palabra está en la RAE, false si no lo está
    */
   public boolean estaPalabraEnLaRAE(String palabra, HashSet<String> palabrasRAE) {
@@ -98,8 +98,8 @@ public class Tablero {
   
   /**
    * Devuelve las posiciones contiguas a una letra
-   * @param posición de la letra en el tablero
-   * @return posiciones contiguas
+   * @param pos
+   * @return posiciones contiguas a una posicion
    */
   public static ArrayList<Integer> devuelvePosicionesContiguas(int pos) {
 
