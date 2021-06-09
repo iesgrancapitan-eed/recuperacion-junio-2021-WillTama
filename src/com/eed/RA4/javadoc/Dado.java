@@ -2,7 +2,7 @@ package com.eed.RA4.javadoc;
 import java.util.ArrayList;
 
 /**
- * 
+ * Clase Dado que representa un dado con 6 caras
  * @author Guillermo Tamajón Hernández
  * 
  */
@@ -10,9 +10,15 @@ import java.util.ArrayList;
 
 public class Dado {
 
+  /**
+   * Contiene caras con letras
+   */
   char[] caras;
 
 
+  /**
+   * Contiene todas las caras para cada dado
+   */
   static char[] caras1 = new char[] {'A','R','H','S','D','E'};
   static char[] caras2 = new char[] {'F','U','A','A','R','B'};
   static char[] caras3 = new char[] {'U','O','E','E','O','C'};
@@ -30,8 +36,14 @@ public class Dado {
   static char[] caras15 = new char[] {'E','P','V','O','C','U'};
   static char[] caras16 = new char[] {'C','C','A','A','P','T'};
   
+  /**
+   * Contiene los dados sin usar
+   */
   static ArrayList<char[]> dados = new ArrayList<char[]>();
       
+  /**
+   * Crea dados sin repetición
+   */
   Dado(){
     
     if (dados.size() == 0) {
@@ -59,7 +71,10 @@ public class Dado {
     dados.remove(indice);
   }
 
- 
+ /**
+  * Devuelve un número aleatorio que se corresponde a una cara
+  * @return una cara aleatoria
+  */
   public char getCaraAleatoria() {
     return this.caras[(int)(Math.random()*5)];
   }

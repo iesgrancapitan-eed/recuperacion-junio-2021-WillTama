@@ -1,30 +1,42 @@
 package com.eed.RA4.javadoc;
 
-/**
- * 
- * @author Guillermo Tamajón Hernández
- * 
- */
-
 
 import java.util.ArrayList;
 import java.util.HashSet;
 
+/**
+ * Clase Tablero que representa un tablero 4x4 de letras
+ * @author hetag
+ *
+ */
 public class Tablero {
+  /**
+   * Contiene letras
+   */
   char[] tableroDeJuego = new char[16];
   
-  
+  /**
+   * Crea objetos de tipo Tablero
+   */
   Tablero(){
     this.llenarTablero();
   }
 
 
+  /**
+   * Llena el tablero de letras
+   */
   public void llenarTablero() {
     for(int i = 0; i < tableroDeJuego.length; i++) {
       tableroDeJuego[i] = (new Dado()).getCaraAleatoria();
     }
   }
   
+  /**
+   * Comprueba si la palabra está en el tablero
+   * @param palabra
+   * @return true si la palabra está en el tablero false si no lo está
+   */
   public boolean estaPalabraEnTablero(String palabra) {
     
     if (palabra.length() == 0) {
@@ -56,15 +68,25 @@ public class Tablero {
       posiciones2 = new ArrayList<Integer>();
     }
     return !posiciones1.isEmpty();
-    
   }
   
-  
+  /**
+   * Comprueba si la palabra está en la RAE
+   * @param palabra
+   * @param colección de palabras de la RAE
+   * @return true si la palabra está en la RAE, false si no lo está
+   */
   public boolean estaPalabraEnLaRAE(String palabra, HashSet<String> palabrasRAE) {
     
     return palabrasRAE.contains(palabra.toLowerCase());
   }
   
+  /**
+   * Comprueba si la palabra es correcta
+   * @param palabra
+   * @param palabrasRAE
+   * @return true si la palabra es correcta, false si no lo es
+   */
   public boolean esPalabraCorrecta(String palabra, HashSet<String> palabrasRAE) {
     
     if(estaPalabraEnTablero(palabra) && estaPalabraEnLaRAE(palabra, palabrasRAE)) {
@@ -74,7 +96,11 @@ public class Tablero {
     return false;
   }
   
-  
+  /**
+   * Devuelve las posiciones contiguas a una letra
+   * @param posición de la letra en el tablero
+   * @return posiciones contiguas
+   */
   public static ArrayList<Integer> devuelvePosicionesContiguas(int pos) {
 
     ArrayList<Integer> posicionesContiguas = new ArrayList<Integer>();
@@ -150,6 +176,9 @@ public class Tablero {
     return posicionesContiguas;
   }
 
+  /**
+   * Devuelve una cadena para representar el tablero
+   */
   public String toString() {
 
     String tablero = "";

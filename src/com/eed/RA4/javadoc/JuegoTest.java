@@ -1,12 +1,6 @@
 package com.eed.RA4.javadoc;
 
 
-/**
- * 
- * @author Guillermo Tamajón Hernández
- * 
- */
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -15,10 +9,22 @@ import java.util.HashSet;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Clase que sirve para jugar la partida
+ * @author hetag
+ *
+ */
 public class JuegoTest {
 
+  /**
+   * Segundos de partida
+   */
   static final int segundos = 50;
 
+  /**
+   * Comprueba si el jugador quiere salir
+   * @return true si el jugador quiere salir, false si no
+   */
   static boolean deseoSalir() {
     Scanner s = new Scanner(System.in);
     System.out.println("¿Quiéres jugar otra? (s/n)");
@@ -30,6 +36,10 @@ public class JuegoTest {
     return false;
   }
 
+  /**
+   * Muestra los puntos de todos los jugadores
+   * @param jugadores que van a jugar
+   */
   static void mostrarPuntos(ArrayList<Jugador> jugadores) {
 
     for(int i = 0; i<jugadores.size(); i++) {
@@ -38,6 +48,10 @@ public class JuegoTest {
     }    
   }
 
+  /**
+   * Muestra al jugador ganador
+   * @param jugadores que han jugado
+   */
   static void mostrarGanador(ArrayList<Jugador> jugadores) {
 
     System.out.println("Y el trofeo es para...");
@@ -61,6 +75,11 @@ public class JuegoTest {
   }
 
 
+  /**
+   * Crea una colección con las palabras de la RAE
+   * @return colección con las palabras de la RAE
+   * @throws IOException
+   */
   static HashSet<String> crearColeccionRAE() throws IOException {
     BufferedReader ficheroRAE = new BufferedReader(new FileReader("RAE.txt"));
     String linea;//Declaro para usar luego
@@ -76,6 +95,11 @@ public class JuegoTest {
     return palabrasRAE;
   }
   
+  /**
+   * Devuelve la palabra sin tildes
+   * @param palabra
+   * @return palabra sin tildes
+   */
   static String devuelveSinTildes(String palabra) {
     
     String nuevaPalabra = "";
@@ -105,6 +129,11 @@ public class JuegoTest {
     
   }
 
+  /**
+   * Crea jugadores 
+   * @param número de jugadores
+   * @return jugadores
+   */
   static ArrayList<Jugador> crearJugadores(int numeroDeJugadores) {
     Scanner s = new Scanner(System.in);
     ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
@@ -127,20 +156,28 @@ public class JuegoTest {
     return jugadores;
   }
 
+  /**
+   * Pausa hasta pulsar intro
+   */
   private static void pausar() {
     Scanner s = new Scanner(System.in);
     System.out.println("Pulsa intro para comenzar...");
     s.nextLine();
   }
 
-  //Pausa con intro
+  /**
+   * Pausa hasta pulsar intro
+   */
   private static void pausar2() {
     Scanner s = new Scanner(System.in);
     System.out.println("Pulsa intro para continuar...");
     s.nextLine();
   }
 
-  //MAIN
+  /**
+   * Se encarga del proceso de la partida
+   * @param args
+   */
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
 

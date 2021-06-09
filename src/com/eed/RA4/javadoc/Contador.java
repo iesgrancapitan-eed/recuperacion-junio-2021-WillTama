@@ -1,22 +1,28 @@
 package com.eed.RA4.javadoc;
 
 
-/**
- * 
- * @author Guillermo Tamajón Hernández
- * 
- */
-
-
-
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ * Clase Contador que ejecuta una cuenta atrás
+ * @author hetag
+ *
+ */
 public class Contador {
   
+  /**
+   * Intervalo de tiempo
+   */
    int intervalo;
+   /**
+    * Temporizador
+    */
    Timer timer;
- 
+   /**
+    * Hace la cuenta atrás
+    * @param segundos
+    */
   public void cuentaAtras(int segundos) {
     
     int delay = 1000;
@@ -34,7 +40,10 @@ public class Contador {
   }, delay, periodo);
   }
   
-
+/**
+ * Actualiza los segundos restantes
+ * @return segundos restantes
+ */
   private  int setInterval() {
     if (intervalo == 1)
         timer.cancel();

@@ -1,35 +1,58 @@
 package com.eed.RA4.javadoc;
 
-/**
- * 
- * @author Guillermo Tamajón Hernández
- * 
- */
-
 
 import java.util.ArrayList;
 
+/**
+ * 
+ * @author hetag
+ * Clase Jugador que reprensenta cada jugador 
+ */
 public class Jugador {
   
+  /**
+   * Contiene palabras acertadas
+   */
   ArrayList<String> palabrasAcertadas = new ArrayList<String>();
+  /**
+   * Puntos del jugador
+   */
   int puntos;
+  /**
+   * Nombre del jugador
+   */
   String nombre;
   
+  /**
+   * Crea objetos de tipo jugador
+   * @param nombre del jugador
+   */
   Jugador(String nombre){
     this.nombre = nombre;
     puntos = 0;
   }
   
+  /**
+   * Devuelve nombre del jugador
+   * @return nombre
+   */
   public String getNombre() {
     return nombre;
   }
 
-
+  /**
+   * Devuelve puntos del jugador
+   * @return puntos
+   */
   public int getPuntos() {
     return puntos;
   }
 
 
+  /**
+   * Comprueba si la palabra es correcta y la añade
+   * @param palabra acertada
+   */
   public void addPalabra(String palabra) {
     
     if (!palabrasAcertadas.contains(palabra.toUpperCase())) {
@@ -40,6 +63,10 @@ public class Jugador {
   }
   
 
+  /**
+   * Comprueba la longitud de la palabra y suma los puntos correspondientes
+   * @param palabra
+   */
   public void sumarPuntos(String palabra) {
     
     if (palabra.length() >= 8) {
@@ -60,11 +87,19 @@ public class Jugador {
     
   }
   
+  /**
+   * Devuelve puntos del jugador
+   * @return puntos
+   */
   public int devolverPuntos() {
     return puntos;
   }
   
 
+  /**
+   * Devuelve las palabras acertadas
+   * @return palabras acertadas
+   */
   public String devolvePalabrasAcertadas() {
     
     String palabrasADevolver = "";
