@@ -9,6 +9,7 @@ package com.eed.RA4.refactorizacion;
  */
 public class Ahorcado {
   
+  private static final int VIDAS_INICIALES = 7;
   private String palabra;
   private String palabraOculta;
   private int longitud;
@@ -24,7 +25,7 @@ public class Ahorcado {
     //Palabra oculta que se ir� desbloqueando
     this.palabraOculta = "_".repeat(this.longitud);
     //Vidas iniciales
-    this.vidasRestantes = 7;
+    this.vidasRestantes = VIDAS_INICIALES;
     //Letras usadas iniciales, es decir, cadena vac�a
     this.letrasUsadas = "";
   }
@@ -49,7 +50,7 @@ public class Ahorcado {
     this.palabra = nuevaPalabra.toUpperCase(); 
     this.longitud = this.palabra.length();
     this.palabraOculta = "_".repeat(this.longitud);
-    this.vidasRestantes = 7;
+    this.vidasRestantes = VIDAS_INICIALES;
     this.letrasUsadas = "";
   }
   
