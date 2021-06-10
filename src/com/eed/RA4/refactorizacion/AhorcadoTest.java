@@ -51,7 +51,7 @@ public class AhorcadoTest {
     
     
     //Bucle para probar letras hasta ganar o perder
-    while (!Probando.hasAcertado() && Probando.getVidasRestantes() > 0) {
+    while (!Probando.acierto() && Probando.getVidasRestantes() > 0) {
       System.out.print("�QU� LETRA QUIERES PROBAR?: ");
       if (!Probando.letraDescubierta(s.next().charAt(0)) ) {
         System.out.println("");

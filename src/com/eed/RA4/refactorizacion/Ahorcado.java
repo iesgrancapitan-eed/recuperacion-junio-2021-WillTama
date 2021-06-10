@@ -14,7 +14,6 @@ public class Ahorcado {
   private int longitud;
   private int vidasRestantes;
   private String letrasUsadas;
-  private static int VIDAS_MAXIMAS = 7;
 
   //Constructor
   Ahorcado(String palabra) {
@@ -106,7 +105,7 @@ public class Ahorcado {
   }
   
   //Metodo para comprobar si se ha encontrado la palabra
-  public boolean hasAcertado() {
+  public boolean acierto() {
     return this.palabra.equals(this.palabraOculta);  
   }
   
