@@ -7,9 +7,8 @@ package com.eed.RA4.refactorizacion;
  * 
  * 
  */
-public class Ahorcado {
+public class Ahorcado extends Juego {
   
-  private static final int VIDAS_INICIALES = 7;
   private String palabra;
   private String palabraOculta;
   private int longitud;
