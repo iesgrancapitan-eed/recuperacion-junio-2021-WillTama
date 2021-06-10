@@ -5,7 +5,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * Clase Contador que ejecuta una cuenta atrás
+ * Contador que ejecuta una cuenta atrás
  * @author hetag
  *
  */
@@ -21,7 +21,7 @@ public class Contador {
    Timer timer;
    /**
     * Hace la cuenta atras
-    * @param segundos
+    * @param segundos segundos de cada turno
     */
   public void cuentaAtras(int segundos) {
     

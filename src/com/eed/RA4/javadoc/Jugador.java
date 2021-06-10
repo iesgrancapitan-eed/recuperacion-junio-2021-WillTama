@@ -3,7 +3,7 @@ package com.eed.RA4.javadoc;
 
 import java.util.ArrayList;
 /**
- * Clase Jugador que reprensenta cada jugador 
+ * Jugador que reprensenta cada jugador 
  * @author hetag
  *
  */
@@ -24,7 +24,7 @@ public class Jugador {
   
   /**
    * Crea objetos de tipo jugador
-   * @param nombre
+   * @param nombre nombre del jugador
    */
   Jugador(String nombre){
     this.nombre = nombre;
@@ -50,7 +50,7 @@ public class Jugador {
 
   /**
    * Comprueba si la palabra es correcta y la añade
-   * @param palabra
+   * @param palabra palabra introducida
    */
   public void addPalabra(String palabra) {
     
@@ -64,7 +64,7 @@ public class Jugador {
 
   /**
    * Comprueba la longitud de la palabra y suma los puntos correspondientes
-   * @param palabra
+   * @param palabra palabra introducida
    */
   public void sumarPuntos(String palabra) {
     

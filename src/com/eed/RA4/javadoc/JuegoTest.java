@@ -10,7 +10,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Clase que sirve para jugar la partida
+ * Sirve para jugar la partida.
+ * Juego: Boggle
+ * Una cantidad de jugadores a elegir jugarán para adivinar palabras durante 50 segundos. Una serie de dados se volcarán en un tablero 4x4
+ * quedando así un tablero con letras. Para sumar puntos las palabras deben poder formarse siguiendo una cadena, sólo con las letras de alrededor.
+ * También, debe aparecer en la RAE.
+ * El jugador con más puntos gana
  * @author hetag
  *
  */
@@ -38,7 +43,7 @@ public class JuegoTest {
 
   /**
    * Muestra los puntos de todos los jugadores
-   * @param jugadores
+   * @param jugadores que han jugado
    */
   static void mostrarPuntos(ArrayList<Jugador> jugadores) {
 
@@ -50,7 +55,7 @@ public class JuegoTest {
 
   /**
    * Muestra al jugador ganador
-   * @param jugadores
+   * @param jugadores que han jugado
    */
   static void mostrarGanador(ArrayList<Jugador> jugadores) {
 
@@ -100,7 +105,7 @@ public class JuegoTest {
 
   /**
    * Crea jugadores 
-   * @param númeroDeJugadores
+   * @param númeroDeJugadores que participan
    * @return jugadores
    */
   static ArrayList<Jugador> crearJugadores(int numeroDeJugadores) {
@@ -144,7 +149,9 @@ public class JuegoTest {
   }
 
   /**
-   * Se encarga del proceso de la partida
+   * Se encarga del proceso de la partida del Boggle. 
+   * Se empezará eligiendo los jugadores.
+   * Así, los jugadores empezarán a competir por ver quién tiene más puntos hasta que se desee terminar con la partida.
    * @param args
    */
   public static void main(String[] args) {
@@ -175,7 +182,7 @@ public class JuegoTest {
           System.out.println("Es el turno de " + jugadores.get(i).nombre + ": ");
           pausar();
 
-          //Inicio contador
+
           contador = new Contador();
           contador.cuentaAtras(segundos);
 

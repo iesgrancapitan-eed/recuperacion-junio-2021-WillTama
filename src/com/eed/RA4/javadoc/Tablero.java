@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 /**
- * Clase Tablero que representa un tablero 4x4 de letras
+ * Tablero que representa un tablero 4x4 de letras
  * @author hetag
  *
  */
@@ -34,7 +34,7 @@ public class Tablero {
   
   /**
    * Comprueba si la palabra está en el tablero
-   * @param palabra
+   * @param palabra introducida
    * @return true si la palabra está en el tablero false si no lo está
    */
   public boolean estaPalabraEnTablero(String palabra) {
@@ -72,8 +72,8 @@ public class Tablero {
   
   /**
    * Comprueba si la palabra está en la RAE
-   * @param palabra
-   * @param palabrasRAE
+   * @param palabra introducida
+   * @param palabrasRAE todas las palabras de la RAE
    * @return true si la palabra está en la RAE, false si no lo está
    */
   public boolean estaPalabraEnLaRAE(String palabra, HashSet<String> palabrasRAE) {
@@ -83,8 +83,8 @@ public class Tablero {
   
   /**
    * Comprueba si la palabra es correcta
-   * @param palabra
-   * @param palabrasRAE
+   * @param palabra introducida
+   * @param palabrasRAE todas las palabras de la RAE
    * @return true si la palabra es correcta, false si no lo es
    */
   public boolean esPalabraCorrecta(String palabra, HashSet<String> palabrasRAE) {
@@ -98,7 +98,7 @@ public class Tablero {
   
   /**
    * Devuelve las posiciones contiguas a una letra
-   * @param pos
+   * @param pos posición en el tablero de una letra
    * @return posiciones contiguas a una posicion
    */
   public static ArrayList<Integer> devuelvePosicionesContiguas(int pos) {
