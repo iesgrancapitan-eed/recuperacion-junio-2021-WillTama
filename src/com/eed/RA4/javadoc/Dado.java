@@ -2,7 +2,7 @@ package com.eed.RA4.javadoc;
 import java.util.ArrayList;
 
 /**
- * Clase Dado que representa un dado con 6 caras
+ * Dado que representa un dado con 6 caras
  * @author Guillermo Tamajón Hernández
  * 
  */
